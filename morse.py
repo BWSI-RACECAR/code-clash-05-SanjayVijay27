@@ -113,7 +113,7 @@ class Solution:
             
             #TODO: Write code below to return a string with the solution to the prompt.
             code = ""
-            for char in message:
+            for char in message.upper():
                 code += MORSE_CODE_DICT[char] + " "
             return code[:-1]
 
