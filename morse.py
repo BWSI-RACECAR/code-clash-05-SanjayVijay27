@@ -112,10 +112,14 @@ class Solution:
             #return type: string
             
             #TODO: Write code below to return a string with the solution to the prompt.
+            for i in range(len(message), -1, -1):
+                if message[i] == " " and message[i-1] == " ":
+                    message[i] = ""
             code = ""
             for char in message.upper():
                 code += MORSE_CODE_DICT[char] + " "
-            return code[:-1]
+            return code
+
 
 def main():
      str1=input()
